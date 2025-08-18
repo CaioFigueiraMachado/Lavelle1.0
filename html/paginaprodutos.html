@@ -427,7 +427,28 @@
             color: #8b4b8c;
             margin: 1rem 0;
         }
-
+        h1 {
+            font-size: 3rem;
+            color: #8b4b8c;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+            @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
         .product-details-description {
             color: #666;
             line-height: 1.8;
@@ -563,8 +584,35 @@
             to { transform: translateX(0); }
         }
     </style>
+    <style>
+    .click-flash {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(139, 75, 140, 0.15);
+        pointer-events: none;
+        z-index: 9999;
+        animation: flashAnim 0.4s ease;
+    }
+    @keyframes flashAnim {
+        0% { opacity: 0.7; }
+        100% { opacity: 0; }
+    }
+    </style>
 </head>
 <body>
+<script>
+document.body.addEventListener('click', function(e) {
+    // Evita o efeito em botões e links
+    if (e.target.closest('button, a, input, textarea, select')) return;
+    const flash = document.createElement('div');
+    flash.className = 'click-flash';
+    document.body.appendChild(flash);
+    setTimeout(() => flash.remove(), 400);
+});
+</script>
     <!-- Header -->
     <header>
         <nav class="container">
@@ -573,7 +621,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#" style="color: #8b4b8c;">Nossos Produtos</a></li>
                 <li><a href="index.html#about">Sobre</a></li>
-                <li><a href="index.html#contact">Contato</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
             <div class="search-cart">
                 <div class="search-box">
