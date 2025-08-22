@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<?php
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+}
+?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Essence - Nossos Produtos</title>
     <style>
+        .cta-button {
+            background: #8b4b8c;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.4s both;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background: #6d3a6e;
+            transform: translateY(-2px);
+        }
         * {
             margin: 0;
             padding: 0;
@@ -616,12 +638,12 @@ document.body.addEventListener('click', function(e) {
     <!-- Header -->
     <header>
         <nav class="container">
-            <a href="index.html" class="logo">Lavelle</a>
+            <a href="index.php" class="logo">Lavelle</a>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="#" style="color: #8b4b8c;">Nossos Produtos</a></li>
-                <li><a href="index.html#about">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="sobre.php">Sobre</a></li>
+                <li><a href="contato.php">Contato</a></li>
             </ul>
             <div class="search-cart">
                 <div class="search-box">
@@ -631,7 +653,10 @@ document.body.addEventListener('click', function(e) {
                     Carrinho
                     <span class="cart-count" id="cartCount">0</span>
                 </button>
-                <button class="cart-icon" onclick="openLogin()">Login</button>
+                <?php if(isset($_SESSION['id'])): ?>
+                <?php else: ?>
+                    <a class="cta-button" href="../login com database/index.php">Login</a>
+                <?php endif; ?>
             </div>
         </nav>
     </header>
