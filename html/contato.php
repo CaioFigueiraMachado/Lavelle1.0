@@ -557,9 +557,8 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                 <div class="search-box">
                     <input type="text" id="searchInput" placeholder="Buscar perfumes...">
                 </div>
-                <button class="cart-icon" onclick="openCart()">
-                    Carrinho
-                    <span class="cart-count" id="cartCount">0</span>
+             
+                  
                 </button>
                 <?php if(isset($_SESSION['id'])): ?>
                 <?php else: ?>
@@ -744,34 +743,23 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     </section>
 
     <!-- Social Media Section -->
-    <section class="social-section">
-        <div class="container">
-            <h2>Siga-nos nas Redes Sociais</h2>
-            <div class="social-links">
-                <a href="#" class="social-link">📘 Facebook</a>
-                <a href="#" class="social-link">📷 Instagram</a>
-                <a href="#" class="social-link">💬 WhatsApp</a>
-                <a href="#" class="social-link">🐦 Twitter</a>
-                <a href="#" class="social-link">📺 YouTube</a>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Footer -->
-    <footer>
+    <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Contato</h3>
-                    <a href="tel:+5511999999999">Telefone: (11) 99999-9999</a>
-                    <a href="mailto:contato@essence.com.br">E-mail: contato@essence.com.br</a>
-                    <a href="#">Endereço: São Paulo, SP</a>
+                    <a href="#">Telefone: (12) 9953-2672</a>
+                    <a href="#">E-mail: lavelle@gmail.com</a>
+                    <a href="#">Endereço Av. Monsenhor Theodomiro Lobo, 100 - Parque Res. Maria Elmira, Caçapava - SP,</a>
                 </div>
                 <div class="footer-section">
                     <h3>Redes Sociais</h3>
-                    <a href="#">Facebook</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Twitter</a>
+                    <a href="https://www.facebook.com/?locale=pt_BR">Facebook</a>
+                    <a href="https://www.instagram.com/?next=%2F">Instagram</a>
+                    <a href="https://x.com/">Twitter</a>
                 </div>
                 <div class="footer-section">
                     <h3>Políticas</h3>
@@ -781,7 +769,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Lavelle Perfumaria. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Lavelle Perfumaria. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
@@ -810,6 +798,17 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     </div>
 
     <script>
+function openCart() {
+    showNotification('Carrinho disponível na página de produtos!');
+}
+
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    setTimeout(() => notification.remove(), 3000);
+}
         function openCart() {
             showNotification('Carrinho disponível na página de produtos!');
         }

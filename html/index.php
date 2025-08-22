@@ -852,15 +852,15 @@ if(isset($_SESSION['id'])) {
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Contato</h3>
-                    <a href="#">Telefone: (11) 9999-9999</a>
-                    <a href="#">E-mail: contato@essence.com.br</a>
-                    <a href="#">Endereço: São Paulo, SP</a>
+                    <a href="#">Telefone: (12) 9953-2672</a>
+                    <a href="#">E-mail: lavelle@gmail.com</a>
+                    <a href="#">Endereço Av. Monsenhor Theodomiro Lobo, 100 - Parque Res. Maria Elmira, Caçapava - SP,</a>
                 </div>
                 <div class="footer-section">
                     <h3>Redes Sociais</h3>
-                    <a href="#">Facebook</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Twitter</a>
+                    <a href="https://www.facebook.com/?locale=pt_BR">Facebook</a>
+                    <a href="https://www.instagram.com/?next=%2F">Instagram</a>
+                    <a href="https://x.com/">Twitter</a>
                 </div>
                 <div class="footer-section">
                     <h3>Políticas</h3>
@@ -917,8 +917,38 @@ if(isset($_SESSION['id'])) {
 
 
     <script>
-        let cart = [];
+        // Carrinho persistente via localStorage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
         let currentUser = null;
+
+        function saveCart() {
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+        }
+
+        function addToCart(product) {
+            // product: {id, nome, preco, quantidade, ...}
+            const idx = cart.findIndex(item => item.id === product.id);
+            if (idx > -1) {
+                cart[idx].quantidade += product.quantidade || 1;
+            } else {
+                cart.push({...product, quantidade: product.quantidade || 1});
+            }
+            saveCart();
+            showNotification('Produto adicionado ao carrinho!');
+        }
+
+        function updateCartCount() {
+            const count = cart.reduce((acc, item) => acc + item.quantidade, 0);
+            const el = document.getElementById('cartCount');
+            if (el) el.textContent = count;
+        }
+
+        // Inicializa contador ao carregar
+        document.addEventListener('DOMContentLoaded', function() {
+            setupForms();
+            updateCartCount();
+        });
 
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {

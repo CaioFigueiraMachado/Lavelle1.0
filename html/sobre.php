@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<Sect></Sect><!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <?php
@@ -8,7 +8,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Essence - Sobre Nós</title>
+    <title>Lavelle - Sobre Nós</title>
     <style>
         .cart-icon {
             background: #8b4b8c;
@@ -345,7 +345,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
         }
 
@@ -720,7 +720,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     <!-- Header -->
     <header>
         <nav class="container">
-            <a href="index.php" class="logo">Essence</a>
+            <a href="index.php" class="logo">Lavelle</a>
             <ul class="nav-links">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="paginaprodutos.php">Nossos Produtos</a></li>
@@ -731,9 +731,9 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                 <div class="search-box">
                     <input type="text" id="searchInput" placeholder="Buscar perfumes...">
                 </div>
-                <button class="cart-icon" onclick="goToProducts()">
-                    Carrinho
-                    <span class="cart-count" id="cartCount">0</span>
+              
+                 
+                 
                 </button>
                 <?php if(isset($_SESSION['id'])): ?>
                 <?php else: ?>
@@ -747,7 +747,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     <section class="page-header">
         <div class="container">
             <h1>Nossa História</h1>
-            <p>Conheça a jornada da Essence Perfumaria e nossa paixão por criar experiências olfativas únicas e memoráveis</p>
+            <p>Conheça a jornada da Lavelle Perfumaria e nossa paixão por criar experiências olfativas únicas e memoráveis</p>
         </div>
     </section>
 
@@ -756,13 +756,13 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
         <div class="container">
             <div class="story-content">
                 <div class="story-text">
-                    <h2>Uma Paixão que Começou em 2010</h2>
-                    <p>A Essence Perfumaria nasceu do sonho de criar fragrâncias que contassem histórias. Fundada por especialistas em perfumaria com mais de 20 anos de experiência, nossa marca representa a união perfeita entre tradição e inovação.</p>
+                    <h2>Uma Paixão que Começou </h2>
+                    <p>A Lavelle Perfumaria nasceu do sonho de criar fragrâncias que contassem histórias. Fundada por especialistas em perfumaria com  experiência, nossa marca representa a união perfeita entre tradição e inovação.</p>
                     <p>Desde o início, nossa missão tem sido democratizar o acesso a perfumes de alta qualidade, oferecendo fragrâncias premium com preços justos e atendimento personalizado.</p>
                     <p>Hoje, somos reconhecidos como uma das principais perfumarias do país, com milhares de clientes satisfeitos e uma reputação construída sobre confiança, qualidade e excelência.</p>
                 </div>
                 <div class="story-image">
-                    🏢
+                    <img src="./logo.png" alt="">
                 </div>
             </div>
         </div>
@@ -775,15 +775,15 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-year">2010</div>
+                        <div class="timeline-year"></div>
                         <h3>Fundação</h3>
-                        <p>Abertura da primeira loja física em São Paulo, com foco em perfumes importados de alta qualidade.</p>
+                        <p>Abertura da primeiro site, com foco em perfumes importados de alta qualidade.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-year">2013</div>
+                        <div class="timeline-year"></div>
                         <h3>Expansão Digital</h3>
                         <p>Lançamento da loja online, permitindo atender clientes em todo o Brasil com entrega rápida e segura.</p>
                     </div>
@@ -791,26 +791,23 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-year">2016</div>
+                        <div class="timeline-year"></div>
                         <h3>Linha Própria</h3>
-                        <p>Desenvolvimento da primeira linha de perfumes exclusivos Essence, criada por perfumistas renomados.</p>
+                        <p>Desenvolvimento da primeira linha de perfumes exclusivos Lavelle, criada por perfumistas renomados.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-year">2019</div>
+                        <div class="timeline-year"></div>
                         <h3>Certificação Premium</h3>
                         <p>Conquista das principais certificações de qualidade e sustentabilidade do mercado de cosméticos.</p>
                     </div>
                 </div>
                 
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2024</div>
-                        <h3>Liderança Nacional</h3>
-                        <p>Reconhecimento como uma das principais perfumarias online do Brasil, com mais de 100 mil clientes ativos.</p>
-                    </div>
+              
+                    
+                        
                 </div>
             </div>
         </div>
@@ -822,37 +819,37 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
             <h2>Nossos Valores</h2>
             <div class="values-grid">
                 <div class="value-card">
-                    <div class="value-icon">🎯</div>
+                    <div class="value-icon"></div>
                     <h3>Missão</h3>
                     <p>Proporcionar experiências olfativas únicas e memoráveis, oferecendo perfumes de alta qualidade que expressem a personalidade e estilo de cada cliente.</p>
                 </div>
                 
                 <div class="value-card">
-                    <div class="value-icon">👁️</div>
+                    <div class="value-icon"></div>
                     <h3>Visão</h3>
                     <p>Ser reconhecida como a principal referência em perfumaria no Brasil, inovando constantemente e mantendo a excelência em produtos e atendimento.</p>
                 </div>
                 
                 <div class="value-card">
-                    <div class="value-icon">💎</div>
+                    <div class="value-icon"></div>
                     <h3>Qualidade</h3>
                     <p>Compromisso inabalável com a qualidade em todos os aspectos: desde a seleção de fornecedores até o atendimento ao cliente final.</p>
                 </div>
                 
                 <div class="value-card">
-                    <div class="value-icon">🌱</div>
+                    <div class="value-icon"></div>
                     <h3>Sustentabilidade</h3>
                     <p>Responsabilidade ambiental em todos os processos, priorizando fornecedores sustentáveis e embalagens eco-friendly.</p>
                 </div>
                 
                 <div class="value-card">
-                    <div class="value-icon">🤝</div>
+                    <div class="value-icon"></div>
                     <h3>Confiança</h3>
                     <p>Relacionamentos duradouros baseados em transparência, honestidade e compromisso com a satisfação do cliente.</p>
                 </div>
                 
                 <div class="value-card">
-                    <div class="value-icon">🚀</div>
+                    <div class="value-icon"></div>
                     <h3>Inovação</h3>
                     <p>Busca constante por novidades e tendências, sempre oferecendo as mais recentes fragrâncias e tecnologias do mercado.</p>
                 </div>
@@ -866,31 +863,29 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
             <h2>Nossa Equipe</h2>
             <div class="team-grid">
                 <div class="team-member">
-                    <div class="member-photo">👨‍💼</div>
-                    <h3>Carlos Mendes</h3>
-                    <div class="role">Fundador & CEO</div>
-                    <p>Especialista em perfumaria com mais de 25 anos de experiência. Formado em Química e pós-graduado em Cosmetologia pela Universidade de Versailles.</p>
+                    <div class="member-photo"><img src="./caii.png" alt="Carlos Mendes" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+                    <h3>Caio Machado</h3>
+                    <div class="role">DEV TEAM</div>
                 </div>
                 
                 <div class="team-member">
-                    <div class="member-photo">👩‍🔬</div>
-                    <h3>Ana Rodrigues</h3>
-                    <div class="role">Perfumista Chefe</div>
-                    <p>Mestre perfumista formada na França, responsável pelo desenvolvimento de nossas fragrâncias exclusivas. Especialista em notas florais e orientais.</p>
+                    <div class="member-photo"><img src="./lucas (1).png" alt="Ana Rodrigues" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+                    <h3>Lucas Henrique</h3>
+                    <div class="role">DEV TEAM</div>
                 </div>
                 
                 <div class="team-member">
-                    <div class="member-photo">👨‍💻</div>
-                    <h3>Roberto Silva</h3>
-                    <div class="role">Diretor Comercial</div>
-                    <p>MBA em Marketing e especialista em e-commerce. Responsável pelas estratégias de vendas e relacionamento com clientes há mais de 15 anos.</p>
+                    <div class="member-photo"><img src="./sophia.png" alt="Roberto Silva" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+                    <h3>Sophia Ruiz</h3>
+                    <div class="role">SCRUM MASTER</div>
+                    <p></p>
                 </div>
                 
                 <div class="team-member">
-                    <div class="member-photo">👩‍🎨</div>
-                    <h3>Mariana Costa</h3>
+                    <div class="member-photo"><img src="./ana.png" alt="Mariana Costa" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+                    <h3>Ana Victoria
+                    </h3>
                     <div class="role">Designer de Produtos</div>
-                    <p>Formada em Design de Produtos, responsável pela criação das embalagens e identidade visual de nossas fragrâncias exclusivas.</p>
                 </div>
             </div>
         </div>
@@ -929,42 +924,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     </section>
 
     <!-- Certifications Section -->
-    <section class="certifications-section">
-        <div class="container">
-            <h2>Certificações & Qualidade</h2>
-            <div class="certifications-grid">
-                <div class="certification-item">
-                    <div class="cert-icon">🏆</div>
-                    <h3>ISO 9001</h3>
-                    <p>Certificação de qualidade internacional</p>
-                </div>
-                
-                <div class="certification-item">
-                    <div class="cert-icon">🌿</div>
-                    <h3>Cruelty Free</h3>
-                    <p>Não testamos em animais</p>
-                </div>
-                
-                <div class="certification-item">
-                    <div class="cert-icon">♻️</div>
-                    <h3>Sustentável</h3>
-                    <p>Embalagens eco-friendly</p>
-                </div>
-                
-                <div class="certification-item">
-                    <div class="cert-icon">✅</div>
-                    <h3>ANVISA</h3>
-                    <p>Produtos registrados na ANVISA</p>
-                </div>
-                
-                <div class="certification-item">
-                    <div class="cert-icon">🔒</div>
-                    <h3>Segurança</h3>
-                    <p>Testes dermatológicos aprovados</p>
-                </div>
-            </div>
-        </div>
-    </section>
+   
 
     <!-- Testimonials Section -->
     <section class="testimonials-section">
@@ -973,7 +933,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
             <div class="testimonials-grid">
                 <div class="testimonial">
                     <div class="testimonial-text">
-                        A Essence mudou completamente minha relação com perfumes. A qualidade é excepcional e o atendimento é sempre impecável. Recomendo de olhos fechados!
+                        A Lavelle mudou completamente minha relação com perfumes. A qualidade é excepcional e o atendimento é sempre impecável. Recomendo de olhos fechados!
                     </div>
                     <div class="testimonial-author">Maria Santos</div>
                     <div class="testimonial-rating">★★★★★</div>
@@ -981,7 +941,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                 
                 <div class="testimonial">
                     <div class="testimonial-text">
-                        Compro na Essence há mais de 5 anos. A variedade de produtos é incrível e sempre encontro fragrâncias exclusivas que não acho em outros lugares.
+                        Compro na Lavelle há mais de 5 anos. A variedade de produtos é incrível e sempre encontro fragrâncias exclusivas que não acho em outros lugares.
                     </div>
                     <div class="testimonial-author">João Oliveira</div>
                     <div class="testimonial-rating">★★★★★</div>
@@ -999,20 +959,20 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     </section>
 
     <!-- Footer -->
-    <footer>
+  <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Contato</h3>
-                    <a href="tel:+5511999999999">Telefone: (11) 99999-9999</a>
-                    <a href="mailto:contato@essence.com.br">E-mail: contato@essence.com.br</a>
-                    <a href="#">Endereço: São Paulo, SP</a>
+                    <a href="#">Telefone: (12) 9953-2672</a>
+                    <a href="#">E-mail: lavelle@gmail.com</a>
+                    <a href="#">Endereço Av. Monsenhor Theodomiro Lobo, 100 - Parque Res. Maria Elmira, Caçapava - SP,</a>
                 </div>
                 <div class="footer-section">
                     <h3>Redes Sociais</h3>
-                    <a href="#">Facebook</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Twitter</a>
+                    <a href="https://www.facebook.com/?locale=pt_BR">Facebook</a>
+                    <a href="https://www.instagram.com/?next=%2F">Instagram</a>
+                    <a href="https://x.com/">Twitter</a>
                 </div>
                 <div class="footer-section">
                     <h3>Políticas</h3>
@@ -1022,11 +982,10 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Essence Perfumaria. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Lavelle Perfumaria. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
-
     <!-- Login Modal -->
     <div id="loginModal" class="modal">
         <div class="modal-content">
@@ -1051,6 +1010,17 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     </div>
 
     <script>
+function openCart() {
+    showNotification('Carrinho disponível na página de produtos!');
+}
+
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    setTimeout(() => notification.remove(), 3000);
+}
         function openCart() {
             showNotification('Carrinho disponível na página de produtos!');
         }

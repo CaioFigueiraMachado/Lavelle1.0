@@ -626,6 +626,17 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 </head>
 <body>
 <script>
+function openCart() {
+    showNotification('Carrinho disponível na página de produtos!');
+}
+
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    setTimeout(() => notification.remove(), 3000);
+}
 document.body.addEventListener('click', function(e) {
     // Evita o efeito em botões e links
     if (e.target.closest('button, a, input, textarea, select')) return;
@@ -686,20 +697,20 @@ document.body.addEventListener('click', function(e) {
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Contato</h3>
-                    <a href="#">Telefone: (11) 9999-9999</a>
-                    <a href="#">E-mail: contato@essence.com.br</a>
-                    <a href="#">Endereço: São Paulo, SP</a>
+                    <a href="#">Telefone: (12) 9953-2672</a>
+                    <a href="#">E-mail: lavelle@gmail.com</a>
+                    <a href="#">Endereço Av. Monsenhor Theodomiro Lobo, 100 - Parque Res. Maria Elmira, Caçapava - SP,</a>
                 </div>
                 <div class="footer-section">
                     <h3>Redes Sociais</h3>
-                    <a href="#">Facebook</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Twitter</a>
+                    <a href="https://www.facebook.com/?locale=pt_BR">Facebook</a>
+                    <a href="https://www.instagram.com/?next=%2F">Instagram</a>
+                    <a href="https://x.com/">Twitter</a>
                 </div>
                 <div class="footer-section">
                     <h3>Políticas</h3>
@@ -709,7 +720,7 @@ document.body.addEventListener('click', function(e) {
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Lavelle Perfumaria. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Lavelle Perfumaria. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
