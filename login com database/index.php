@@ -19,6 +19,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
             }
             $_SESSION['id'] = $usuario['id'];
             $_SESSION['nome'] = $usuario['nome'];
+            $_SESSION['email'] = $usuario['email']; // <-- Adiciona email na sessão
             header("Location: ../html/index.php");
             exit();
         } else {
@@ -39,6 +40,7 @@ if(isset($_POST['registro_nome']) && isset($_POST['registro_email']) && isset($_
         if($query_check->num_rows > 0) {
             $registro_error = "E-mail já cadastrado.";
         } else {
+            // Salva a senha em texto puro
             $sql_insert = "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
             if($mysqli->query($sql_insert)) {
                 $registro_success = "Usuário registrado com sucesso!";
@@ -207,6 +209,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
             $_SESSION['id'] = $usuario['id'];
             $_SESSION['nome'] = $usuario['nome'];
+            $_SESSION['email'] = $usuario['email']; // <-- Adiciona email na sessão
 
             header("Location: painel.php");
 
@@ -232,6 +235,7 @@ if(isset($_POST['registro_nome']) && isset($_POST['registro_email']) && isset($_
         if($query_check->num_rows > 0) {
             echo "E-mail já cadastrado.";
         } else {
+            // Salva a senha em texto puro
             $sql_insert = "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
             if($mysqli->query($sql_insert)) {
                 echo "Usuário registrado com sucesso!";

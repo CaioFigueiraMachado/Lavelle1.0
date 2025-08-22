@@ -786,6 +786,27 @@ if(isset($_SESSION['id'])) {
                 <li><a href="paginaprodutos.php">Nossos Produtos</a></li>
                 <li><a href="sobre.php">Sobre</a></li>
                 <li><a href="contato.php">Contato</a></li>
+                <?php if(isset($_SESSION['email']) && $_SESSION['email'] === 'adm@gmail.com'): ?>
+                    <li class="nav-admin">
+                        <a href="admin.php" style="color:#50382b; font-weight:500;">Admin</a>
+                        <ul style="list-style:none; margin:0; padding:0; position:absolute; background:#efdacb; border-radius:8px; box-shadow:0 2px 8px #e2acac; min-width:140px; display:none; z-index:999;">
+                            <li><a href="produtos_admin.php" style="color:#50382b; font-weight:500; display:block; padding:8px 16px;">GEN PRODUTOS</a></li>
+                        </ul>
+                    </li>
+                    <script>
+                    // Dropdown simples para Admin
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var navAdmin = document.querySelector('.nav-admin');
+                        var submenu = navAdmin.querySelector('ul');
+                        navAdmin.addEventListener('mouseenter', function() {
+                            submenu.style.display = 'block';
+                        });
+                        navAdmin.addEventListener('mouseleave', function() {
+                            submenu.style.display = 'none';
+                        });
+                    });
+                    </script>
+                <?php endif; ?>
             </ul>
             <div class="search-cart">
                 <div class="search-box">
