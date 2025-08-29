@@ -4,11 +4,11 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 }
 if(isset($_SESSION['id'])) {
     // Buscar dados do usuário do banco
-    include('../login com database/conexao.php');
+    include('./conexao/conexao.php');
     $id = $_SESSION['id'];
     // Upload de foto (deve ser antes de qualquer saída HTML)
     if(isset($_POST['alterar_foto']) && isset($_FILES['foto']) && $_FILES['foto']['error'] == 0) {
-        $fotos_dir = '../login com database/fotos';
+        $fotos_dir = './conexao/fotos';
         if (!is_dir($fotos_dir)) {
             mkdir($fotos_dir, 0777, true);
         }
@@ -27,7 +27,7 @@ if(isset($_SESSION['id'])) {
         if(move_uploaded_file($_FILES['foto']['tmp_name'], $fotos_dir . '/' . $foto_nome)) {
             $sql = "UPDATE usuarios SET foto = 'fotos/$foto_nome' WHERE id = '$id'";
             $mysqli->query($sql);
-            header("Location: index.php");
+            header("Location: ./index.php");
             exit();
         } else {
             echo '<script>alert("Erro ao salvar foto.");</script>';
@@ -819,7 +819,7 @@ if(isset($_SESSION['id'])) {
                 <?php if(isset($_SESSION['id'])): ?>
                     <button class="cart-icon" onclick="openProfile()" style="margin-right:0.5rem;">Perfil</button>
                 <?php else: ?>
-                    <a class="cta-button" href="../login com database/login.php">Login</a>
+                    <a class="cta-button" href="./conexao/login.php">Login</a>
                 <?php endif; ?>
             </div>
         </nav>
@@ -979,7 +979,7 @@ if(isset($_SESSION['id'])) {
         // Navigation Functions
         function goToProducts(category = '') {
             // Redireciona para paginaprodutos.html
-            window.location.href = 'paginaprodutos.php';
+            window.location.href = './html/paginaprodutos.php';
         }
 
         // Modal Functions
