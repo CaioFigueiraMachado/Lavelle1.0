@@ -819,7 +819,7 @@ if(isset($_SESSION['id'])) {
                 <?php if(isset($_SESSION['id'])): ?>
                     <button class="cart-icon" onclick="openProfile()" style="margin-right:0.5rem;">Perfil</button>
                 <?php else: ?>
-                    <a class="cta-button" href="../login com database/index.php">Login</a>
+                    <a class="cta-button" href="../login com database/login.php">Login</a>
                 <?php endif; ?>
             </div>
         </nav>
