@@ -77,7 +77,7 @@ $result = $mysqli->query('SELECT id, nome, descricao, preco, imagem FROM produto
 <body>
     <nav>
         <ul>
-            <li><a href="index.php">Home</a></li>
+            <li><a href="../index.php">Home</a></li>
             <li><a href="admin.php">Admin</a></li>
         </ul>
     </nav>
