@@ -633,7 +633,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
         <nav class="container">
             <a href="index.php" class="logo">Lavelle</a>
             <ul class="nav-links">
-                <li><a href="index.php">Home</a></li>
+                <li><a href="../index.php">Home</a></li>
                 <li><a href="#" style="color: #8b4b8c;">Nossos Produtos</a></li>
                 <li><a href="sobre.php">Sobre</a></li>
                 <li><a href="contato.php">Contato</a></li>
@@ -673,7 +673,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                 <button class="filter-btn" onclick="sortProducts('rating')">Mais Avaliados</button>
             </div>
 <?php
-include('../login com database/conexao.php');
+include('../conexao/conexao.php');
 function escape($str) { return htmlspecialchars($str, ENT_QUOTES, 'UTF-8'); }
 $result = $mysqli->query("SELECT * FROM produtos ORDER BY id DESC");
 $produtos = [];
@@ -824,7 +824,7 @@ searchInput.addEventListener('input', function() {
             <h2>Meu Carrinho</h2>
             <?php
             if (isset($_SESSION['id'])) {
-                include('../login com database/conexao.php');
+                include('../conexao/conexao.php');
                 $user_id = $_SESSION['id'];
                 $carrinho = $mysqli->query("SELECT c.*, p.nome, p.preco, p.imagem FROM carrinho c JOIN produtos p ON c.produto_id=p.id WHERE c.usuario_id=$user_id");
             ?>

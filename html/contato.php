@@ -548,7 +548,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
         <nav class="container">
             <a href="index.php" class="logo">Lavelle</a>
             <ul class="nav-links">
-                <li><a href="index.php">Home</a></li>
+                <li><a href="../index.php">Home</a></li>
                 <li><a href="paginaprodutos.php">Nossos Produtos</a></li>
                 <li><a href="sobre.php">Sobre</a></li>
                 <li><a href="#" style="color: #8b4b8c;">Contato</a></li>

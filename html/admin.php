@@ -4,7 +4,7 @@ if (!isset($_SESSION['id']) || !isset($_SESSION['email']) || $_SESSION['email'] 
     header('Location: index.php');
     exit();
 }
-include('../login com database/conexao.php');
+include('../conexao/conexao.php');
 
 // Mensagem de feedback
 $msg = '';
@@ -83,12 +83,13 @@ $result = $mysqli->query('SELECT id, nome, email FROM usuarios');
 <body>
     <nav>
         <ul>
-            <li><a href="../html/index.php">Home</a></li>
+            <li><a href="../index.php">Home</a></li>
             <li><a href="../html/paginaprodutos.php">Produtos</a></li>
             <li><a href="../html/sobre.php">Sobre</a></li>
             <li><a href="../html/contato.php">Contato</a></li>
             <?php if(isset($_SESSION['email']) && $_SESSION['email'] === 'adm@gmail.com'): ?>
                 <li><a href="admin.php" style="color:#7494a7;">Admin</a></li>
+                 <li><a href="./produtos_admin.php" style="color:#50382b; font-weight:500; display:block; padding:8px 16px;">GEN PRODUTOS</a></li>
             <?php endif; ?>
         </ul>
     </nav>

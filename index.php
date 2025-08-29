@@ -757,7 +757,7 @@ if(isset($_SESSION['id'])) {
             <h2 style="color:#8b4b8c; text-align:center;">Meu Perfil</h2>
             <form action="" method="POST" enctype="multipart/form-data">
                 <div style="text-align:center; margin-bottom:1rem;">
-                    <img src="<?php echo isset($user['foto']) && $user['foto'] ? '../login com database/' . $user['foto'] : 'https://via.placeholder.com/100x100?text=Foto'; ?>" alt="Foto de perfil" style="width:100px; height:100px; border-radius:50%; object-fit:cover;">
+                    <img src="<?php echo isset($user['foto']) && $user['foto'] ? '../conexao/' . $user['foto'] : 'https://via.placeholder.com/100x100?text=Foto'; ?>" alt="Foto de perfil" style="width:100px; height:100px; border-radius:50%; object-fit:cover;">
                 </div>
                 <label for="foto">Alterar foto:</label>
                 <input type="file" name="foto" id="foto" accept="image/*" style="margin-bottom:1rem;">
@@ -765,7 +765,7 @@ if(isset($_SESSION['id'])) {
             </form>
             <p><strong>Nome:</strong> <?php echo isset($user['nome']) ? htmlspecialchars($user['nome']) : 'Não disponível'; ?></p>
             <p><strong>Email:</strong> <?php echo isset($user['email']) ? htmlspecialchars($user['email']) : 'Não disponível'; ?></p>
-            <form action="../login com database/logout.php" method="POST">
+            <form action="./conexao/logout.php" method="POST">
                 <button type="submit" class="cta-button" style="background:#ff6b6b;">Deslogar</button>
             </form>
             <button onclick="closeProfile()" class="back-button" style="margin-top:1rem;">Fechar</button>
@@ -783,14 +783,14 @@ if(isset($_SESSION['id'])) {
             <a href="#" class="logo">Lavelle</a>
             <ul class="nav-links">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="paginaprodutos.php">Nossos Produtos</a></li>
-                <li><a href="sobre.php">Sobre</a></li>
-                <li><a href="contato.php">Contato</a></li>
+                <li><a href="./html/paginaprodutos.php">Nossos Produtos</a></li>
+                <li><a href="./html/sobre.php">Sobre</a></li>
+                <li><a href="./html/contato.php">Contato</a></li>
                 <?php if(isset($_SESSION['email']) && $_SESSION['email'] === 'adm@gmail.com'): ?>
                     <li class="nav-admin">
-                        <a href="admin.php" style="color:#50382b; font-weight:500;">Admin</a>
+                        <a href="./html/admin.php" style="color:#50382b; font-weight:500;">Admin</a>
                         <ul style="list-style:none; margin:0; padding:0; position:absolute; background:#efdacb; border-radius:8px; box-shadow:0 2px 8px #e2acac; min-width:140px; display:none; z-index:999;">
-                            <li><a href="produtos_admin.php" style="color:#50382b; font-weight:500; display:block; padding:8px 16px;">GEN PRODUTOS</a></li>
+                            <li><a href="./html/produtos_admin.php" style="color:#50382b; font-weight:500; display:block; padding:8px 16px;">GEN PRODUTOS</a></li>
                         </ul>
                     </li>
                     <script>

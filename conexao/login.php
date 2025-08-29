@@ -20,7 +20,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
             $_SESSION['id'] = $usuario['id'];
             $_SESSION['nome'] = $usuario['nome'];
             $_SESSION['email'] = $usuario['email']; // <-- Adiciona email na sessão
-            header("Location: ../html/index.php");
+            header("Location: ../index.php");
             exit();
         } else {
             $login_error = "Falha ao logar! E-mail ou senha incorretos";

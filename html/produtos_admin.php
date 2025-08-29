@@ -4,7 +4,7 @@ if (!isset($_SESSION['id']) || !isset($_SESSION['email']) || $_SESSION['email'] 
     header('Location: index.php');
     exit();
 }
-include('../login com database/conexao.php');
+include('../conexao/conexao.php');
 
 $msg = '';
 
