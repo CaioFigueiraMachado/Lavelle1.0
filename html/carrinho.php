@@ -1,9 +1,9 @@
 <?php
 // Carrinho por usuário logado
 session_start();
-include('../conexao/conexao.php');
+include('../login com database/conexao.php');
 if (!isset($_SESSION['id'])) {
-    header('Location: ../conexao/index.php');
+    header('Location: ../login com database/index.php');
     exit;
 }
 $user_id = $_SESSION['id'];

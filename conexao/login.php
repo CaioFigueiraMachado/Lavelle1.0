@@ -161,7 +161,7 @@ if(isset($_POST['registro_nome']) && isset($_POST['registro_email']) && isset($_
                 <button type="submit" class="cta-button">Entrar</button>
             </form>
             <span class="toggle-link" onclick="showForm('registroForm')">Não tem conta? Cadastre-se</span>
-            <a href="../html/index.php" class="back-button">Voltar para página inicial</a>
+            <a href="../index.php" class="back-button">Voltar para página inicial</a>
         </div>
         <div id="registroForm" style="display:none;">
             <h1>Cadastro</h1>
